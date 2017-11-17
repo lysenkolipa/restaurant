@@ -1,4 +1,16 @@
+-var menu = ['HOME', 'ABOUT', 'BREAD', 'DRINK', 'FOOD', 'CONTACTS']
+
 header.header
-    .header__container
-        .logo: img.logo__picture(src="images/logo.jpg" alt="picture")
-        include nav
+    img.header--logo(src="../images/logo.png")
+    ul.header__menu
+        each item in menu
+            if item === 'HOME'
+                li.header--item
+                    a.header--link.current(href="#")=item
+            else
+                li.header--item
+                    a.header--link(href="#")=item
+
+
+
+

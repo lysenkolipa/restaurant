@@ -1,13 +1,74 @@
 .header {
-  background: yellowgreen;
-  margin: 0;
-  width: 1600px;
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 0px 20px 0px 30px;
+  width: 100%;
+  &__menu {
+    list-style: none;
+    margin: 0;
+    padding: 25px 0 5px;
+    text-align: center;
+    background: black;
   }
+
+  &--item {
+    display: inline-block;
+
+    &:after {
+      content: "|";
+      color: #606060;
+      display: inline-block;
+      vertical-align:top;
+    }
+
+    &:last-child:after {content: none;}
+  }
+
+
+  &--link {
+    text-decoration: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+
+    &, &:visited {color: #9d999d;}
+    .current, &:hover{color: yellowgreen;}
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      height: 4px;
+      top: auto;
+      right: 50%;
+      bottom: -5px;
+      left: 50%;
+      background: yellowgreen;
+      transition: .8s;
+    }
+    &:hover:before,.current:before {left: 0;}
+    &:hover:after,.current:after {right: 0;}
+  }
+
+  @media (max-width: 550px) {
+    &__menu {padding-top: 0;}
+    &--item {
+      display: block;
+      &:after {content: none;}
+    }
+
+    &--link {
+      padding: 25px 0 20px;
+      margin: 0 30px;
+    }
+  }
+}
+
+.header--logo {
+  width: 120px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
 }

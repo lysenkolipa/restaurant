@@ -1,0 +1,24 @@
+.container__menu {
+  background: url('../images/menu.jpg') no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 59px;
+  padding: 200px 0;
+  text-align: center;
+  color: #606060;
+  font-size: 2rem;
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.button--menu {
+  margin-top: 5%;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 10px 22px 7px;
+  text-decoration: none;
+  color: white;
+  background: #606060;
+  border: 2px solid #606060;
+  font-size: 1.5rem;
+}
