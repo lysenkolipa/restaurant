@@ -1,0 +1,28 @@
+.menu--list {
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &_items {
+    width: 80%;
+    height: auto;
+    padding-left: 250px;
+
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 0;
+    flex-wrap: wrap;
+  }
+
+  &__img {
+    padding-left: 10px;
+    padding-bottom: 40px;
+  }
+}
+.list__menu {
+  background: none;
+}
